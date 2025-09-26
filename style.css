@@ -198,7 +198,7 @@ h1 {
 	}
 }
 
-/* Content Section */
+/* CONTENT SECTION */
 .content-section {
 	display: grid;
 	grid-template-columns: 3fr 1fr;
@@ -208,6 +208,7 @@ h1 {
 	gap: var(--section-padding);
 }
 
+/* PROJECTS SECTION */
 .projects {
 	grid-row: 1 / -1;
 }
@@ -260,6 +261,7 @@ h1 {
 	}
 }
 
+/* ANNOUNCEMENT SECTION */
 .announcements {
 	background-color: white;
 	border-radius: var(--semi-rounded-borders);
@@ -290,6 +292,7 @@ h1 {
 	display: none;
 }
 
+/* TRENDING SECTION */
 .trending-projects {
 	background-color: white;
 	padding: var(--section-padding);
@@ -306,14 +309,11 @@ h1 {
 	align-items: center;
 	gap: var(--small-gap);
 
-	p {
-		font-weight: normal;
-	}
-
 	p:last-of-type {
 		color: var(--text-muted-color);
 		font-size: var(--small-font-size);
 		margin-top: 4px;
+		font-weight: normal;
 	}
 
 	img {
