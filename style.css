@@ -1,0 +1,10 @@
+@import url(./normalize.css);
+
+:root {
+	--primary-font-size: 2rem;
+	--heading-font-size: 1rem;
+	--small-font-size: 0.8rem;
+	--text-muted-color: rgba(0, 0, 0, 0.8);
+	--primary-color: #980730;
+	--secondary-color: #07986f;
+}
