@@ -13,7 +13,9 @@
 	--secondary-color: #07986f;
 	--box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
 	--rounded-borders: 24px;
+	--semi-rounded-borders: 8px;
 	--section-padding: 24px;
+	--small-gap: 16px;
 	--large-section-padding: 64px;
 	--font-family: "Albert Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -57,7 +59,7 @@ h1 {
 .header {
 	display: flex;
 	align-items: center;
-	gap: 16px;
+	gap: var(--small-gap);
 	margin-bottom: 56px;
 
 	h1 {
@@ -100,7 +102,7 @@ h1 {
 
 .search {
 	display: flex;
-	gap: 16px;
+	gap: var(--small-gap);
 	flex: 1 1 0;
 
 	input {
@@ -216,7 +218,7 @@ h1 {
 
 .project-card {
 	background-color: white;
-	border-radius: 8px;
+	border-radius: var(--semi-rounded-borders);
 	display: flex;
 	overflow: hidden;
 	box-shadow: var(--box-shadow);
@@ -229,7 +231,7 @@ h1 {
 }
 
 .project-card-inner {
-	padding: 16px;
+	padding: var(--small-gap);
 	flex: 1 1 0;
 	display: flex;
 	flex-direction: column;
@@ -256,12 +258,12 @@ h1 {
 
 .announcements {
 	background-color: white;
-	border-radius: 8px;
-	padding: var(--section-padding) calc(var(--section-padding) * 2);
+	border-radius: var(--semi-rounded-borders);
+	padding: var(--section-padding);
 	margin-top: 8px;
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
+	gap: var(--small-gap);
 	box-shadow: var(--box-shadow);
 }
 
@@ -277,9 +279,42 @@ h1 {
 	display: block;
 	width: 100%;
 	border: 1px solid rgba(0, 0, 0, 0.15);
-	margin-top: 16px;
+	margin-top: var(--small-gap);
 }
 
 .announcement:last-of-type::after {
 	display: none;
+}
+
+.trending-projects {
+	background-color: white;
+	padding: var(--section-padding);
+	display: flex;
+	flex-direction: column;
+	margin-top: 8px;
+	gap: var(--small-gap);
+	border-radius: var(--semi-rounded-borders);
+	box-shadow: var(--box-shadow);
+}
+
+.trending-project {
+	display: flex;
+	align-items: center;
+	gap: var(--small-gap);
+
+	p {
+		font-weight: normal;
+	}
+
+	p:last-of-type {
+		color: var(--text-muted-color);
+		font-size: var(--small-font-size);
+		margin-top: 4px;
+	}
+
+	img {
+		width: 42px;
+		height: auto;
+		border-radius: 100%;
+	}
 }
