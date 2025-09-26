@@ -41,8 +41,12 @@ h1 {
 .container {
 	display: grid;
 	height: 100vh;
-	grid-template-rows: 1fr 4fr;
+	max-height: 1080px;
+	max-width: 1920px;
+	margin: 0 auto;
+	grid-template-rows: minmax(200px, 1fr) minmax(600px, 4fr);
 	grid-template-columns: 300px 5fr;
+	overflow: auto;
 
 	> div {
 		padding: var(--section-padding);
@@ -86,11 +90,10 @@ h1 {
 
 /* TOP PANEL */
 .top-panel {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr;
+	display: flex;
+	flex-direction: column;
 	padding: var(--section-padding) 5% !important;
-	gap: var(--section-padding);
+	gap: 32px;
 }
 
 .top-section {
@@ -107,6 +110,7 @@ h1 {
 
 	input {
 		border-radius: var(--rounded-borders);
+		box-shadow: inset 0px 0px 2px var(--primary-color);
 		border: none;
 		background-color: var(--primary-color-muted);
 		font-family: var(--font-family);
