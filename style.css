@@ -1,6 +1,7 @@
 @import url(./Assets/normalize.css);
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* VARIABLE DECLARATION & GLOBAL STYLING */
 :root {
 	--primary-font-size: 1rem;
 	--heading-font-size: 1.65rem;
@@ -8,7 +9,7 @@
 	--text-muted-color: rgba(0, 0, 0, 0.8);
 	--primary-color: #980730;
 	--primary-hover-color: #5e001b;
-	--primary-color-muted: #74002135;
+	--primary-color-muted: #98073010;
 	--secondary-color: #07986f;
 	--rounded-borders: 24px;
 	--section-padding: 24px;
@@ -41,11 +42,11 @@ h1 {
 	grid-template-columns: 300px 5fr;
 
 	> div {
-		border: 1px solid black;
 		padding: var(--section-padding);
 	}
 }
 
+/* SIDE PANEL */
 .side-panel {
 	grid-row: 1 / -1;
 	background-color: var(--primary-color);
@@ -80,6 +81,7 @@ h1 {
 	cursor: pointer;
 }
 
+/* TOP PANEL */
 .top-panel {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -186,5 +188,66 @@ h1 {
 	> button:hover {
 		background-color: var(--primary-hover-color);
 		cursor: pointer;
+	}
+}
+
+/* Content Section */
+.content-section {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	background-color: #36000f10;
+	box-shadow: inset 0 4px 4px #98073f05;
+	gap: var(--section-padding);
+}
+
+.projects {
+	grid-row: 1 / -1;
+}
+
+.project-card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-auto-rows: minmax(250px, 1fr);
+	gap: var(--section-padding);
+	margin-top: 8px;
+}
+
+.project-card {
+	background-color: white;
+	border-radius: 8px;
+	display: flex;
+	overflow: hidden;
+
+	.side-color {
+		height: 100%;
+		width: 16px;
+		background-color: #07986f;
+	}
+}
+
+.project-card-inner {
+	padding: 16px;
+	flex: 1 1 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.app-desc {
+		font-size: var(--small-font-size);
+		color: var(--text-muted-color);
+		margin-top: 8px;
+		font-weight: normal;
+	}
+}
+
+.project-card-actions {
+	align-self: flex-end;
+	display: flex;
+	gap: 8px;
+
+	> a {
+		height: 100%;
+		text-decoration: none;
 	}
 }
